@@ -22,16 +22,6 @@ namespace ZombieShooty
 
         // ------------------------------------------------- //
 
-        public void DealDamage(int amount)
-        {
-            // Deal DMG
-            health -= amount;
-
-            // Dead
-            if (health <= 0)
-                Destroy(gameObject);
-        }
-
 
         // ------------------------------------------------- //
         public void Start()
@@ -64,11 +54,7 @@ namespace ZombieShooty
                     if (Time.time > lastAttacked + attackDelay)
                     {
 
-                        //if (player.health > 0)
-                        //{
-                        //    player.TakeDamage(10); //make player take damage    
-                        //}
-                        //lastAttacked = Time.time;
+                        print("yes");
                     }
                 }
             }
