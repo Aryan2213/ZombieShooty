@@ -16,7 +16,7 @@ namespace ZombieShooty
         float lastAttacked = -9999;
 
         //public GameObject player;
-        public Transform target;
+        private Transform target;
         private NavMeshAgent nav;
         float targetDistance;
 
@@ -27,12 +27,13 @@ namespace ZombieShooty
         public void Start()
         {
             nav = GetComponent<NavMeshAgent>();
+            target = GameObject.FindWithTag("Player").transform;
         }
 
 
         void Update()
         {
-            if (targetDistance < 30f)
+            if (targetDistance < 100f)
             {
                 nav.SetDestination(target.position);
             }
