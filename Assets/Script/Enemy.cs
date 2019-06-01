@@ -16,33 +16,24 @@ namespace ZombieShooty
         float lastAttacked = -9999;
 
         //public GameObject player;
-        public Transform target;
+        private Transform target;
         private NavMeshAgent nav;
         float targetDistance;
 
         // ------------------------------------------------- //
-
-        public void DealDamage(int amount)
-        {
-            // Deal DMG
-            health -= amount;
-
-            // Dead
-            if (health <= 0)
-                Destroy(gameObject);
-        }
 
 
         // ------------------------------------------------- //
         public void Start()
         {
             nav = GetComponent<NavMeshAgent>();
+            target = GameObject.FindWithTag("Player").transform;
         }
 
 
         void Update()
         {
-            if (targetDistance < 30f)
+            if (targetDistance < 100f)
             {
                 nav.SetDestination(target.position);
             }
@@ -63,12 +54,8 @@ namespace ZombieShooty
 
                     if (Time.time > lastAttacked + attackDelay)
                     {
-
-                        //if (player.health > 0)
-                        //{
-                        //    player.TakeDamage(10); //make player take damage    
-                        //}
-                        //lastAttacked = Time.time;
+                        //decrease player health here
+                        print("yes");
                     }
                 }
             }
