@@ -19,6 +19,7 @@ namespace ZombieShooty
         private Transform target;
         private NavMeshAgent nav;
         float targetDistance;
+        public GameObject dontWorry;
 
         // ------------------------------------------------- //
 
