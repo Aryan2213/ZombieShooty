@@ -17,10 +17,10 @@ public class SpawnEnemy : MonoBehaviour
 
     IEnumerator Spawn()
     {
-        while (enemyCount < 10)
+        while (enemyCount < 30)
         {
-            posX = Random.Range(0, 200);
-            posZ = Random.Range(0, 140);
+            posX = Random.Range(-100, 200);
+            posZ = Random.Range(-100, 140);
             Vector3 enemyPoint = new Vector3(posX, -52, posZ);
             GameObject clone = Instantiate(enemy, enemyPoint, Quaternion.identity);
             yield return new WaitForSeconds(0.5f);
