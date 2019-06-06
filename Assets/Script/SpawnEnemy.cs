@@ -5,14 +5,15 @@ using UnityEngine;
 public class SpawnEnemy : MonoBehaviour
 {
     public GameObject container;
-    public GameObject enemy;
+    public GameObject enemy, dog;
 
     public int posX, posZ;
-    public int enemyCount;
+    public int enemyCount, dogCount;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(Spawn());
+        //StartCoroutine(SpawnDog());
     }
 
     IEnumerator Spawn()
@@ -31,4 +32,20 @@ public class SpawnEnemy : MonoBehaviour
             }
         }
     }
+    //IEnumerator SpawnDog()
+    //{
+    //    while (dogCount < 2)
+    //    {
+    //        posX = Random.Range(-100, 200);
+    //        posZ = Random.Range(-100, 140);
+    //        Vector3 enemyPoint = new Vector3(posX, -52, posZ);
+    //        GameObject clone = Instantiate(dog, enemyPoint, Quaternion.identity);
+    //        yield return new WaitForSeconds(0.5f);
+    //        enemyCount += 1;
+    //        if (enemy.name == "Enemy")
+    //        {
+    //            clone.transform.SetParent(container.transform);
+    //        }
+    //    }
+    //}
 }

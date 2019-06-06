@@ -6,9 +6,13 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
     #region Varibles
-    public float playerStartHealth = 250;
+    public float maxHealth = 250;
     public float playerHealth;
     public float takeDamage = 15;
+
+
+    public float damageTimeout = 2f;
+    private bool canTakeDamage = true;
 
     public Image playerHealthBar;
     public GameObject hurt;
@@ -16,18 +20,21 @@ public class PlayerHealth : MonoBehaviour
     #endregion
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         // Set players health to starting health value
-        playerHealth = playerStartHealth;
-	}
+        playerHealth = maxHealth;
+    }
 
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (canTakeDamage && collision.gameObject.tag == "Enemy")
         {
+
             PlayerTakeDamage();
             Debug.Log("Help");
+
+            StartCoroutine(damageTimer());
         }
     }
 
@@ -36,7 +43,9 @@ public class PlayerHealth : MonoBehaviour
         // Player takes damage
         playerHealth -= takeDamage;
         // Set health bar to lower
-        playerHealthBar.fillAmount = playerHealth / playerStartHealth;
+        playerHealthBar.fillAmount = playerHealth / maxHealth;
+
+
 
         if (playerHealth < 41)
         {
@@ -52,10 +61,16 @@ public class PlayerHealth : MonoBehaviour
 
         }
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
-        
+
+    }
+    private IEnumerator damageTimer()
+    {
+        canTakeDamage = false;
+        yield return new WaitForSeconds(damageTimeout);
+        canTakeDamage = true;
     }
 }
