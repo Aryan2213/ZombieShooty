@@ -1825,6 +1825,11 @@ PrefabInstance:
       propertyPath: lerpSpeed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8908970380489919693, guid: b95f29df4917d9440a2810bf835efd81,
+        type: 3}
+      propertyPath: jumpHieght
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b95f29df4917d9440a2810bf835efd81, type: 3}
 --- !u!1 &1263152335
