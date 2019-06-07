@@ -5,6 +5,7 @@ using UnityEngine;
 public class Shoot : MonoBehaviour
 {
     public GameObject flash;
+    public AudioSource bang;
 
     //Aiming
     public GameObject hipFire;
@@ -18,11 +19,13 @@ public class Shoot : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             flash.SetActive(true);
+            bang.Play();
 
         }
         else if(Input.GetMouseButtonUp(0))
         {
             flash.SetActive(false);
+            //bang.Stop();
         }
 
         // Aim
