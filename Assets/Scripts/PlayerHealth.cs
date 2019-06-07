@@ -10,11 +10,11 @@ public class PlayerHealth : MonoBehaviour
     public float playerHealth;
     public float takeDamage = 15;
 
-    public float lerpSpeed = 10;
+    public float lerpSpeed = 4f;
     public float damageTimeout = 2f;
     private bool canTakeDamage = true;
 
-    public Slider playerHealthBar;
+    public Slider playerHealthBar, delayHealthBar;
     public GameObject hurt;
     public GameObject dieScreen;
     #endregion
@@ -24,7 +24,8 @@ public class PlayerHealth : MonoBehaviour
     {
         // Set players health to starting health value
         playerHealth = maxHealth;
-        playerHealthBar.value = playerHealth / maxHealth;
+        playerHealthBar.value = playerHealth;
+        delayHealthBar.value = playerHealth;
     }
 
     public void OnCollisionEnter(Collision collision)
@@ -36,6 +37,7 @@ public class PlayerHealth : MonoBehaviour
             Debug.Log("Help");
 
             StartCoroutine(damageTimer());
+
         }
     }
 
@@ -59,6 +61,8 @@ public class PlayerHealth : MonoBehaviour
             // Would You Kindly Die Sir!
             dieScreen.SetActive(true);
             Time.timeScale = 0;
+            delayHealthBar.value = 0;
+            playerHealthBar.value = 0;
 
         }
     }
@@ -66,11 +70,13 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerHealthBar.value != playerHealth)
+
+        if (playerHealth != delayHealthBar.value)
         {
-            playerHealthBar.value = Mathf.Lerp(playerHealthBar.value, playerHealth/maxHealth, Time.deltaTime * lerpSpeed);
+            delayHealthBar.value = Mathf.Lerp(delayHealthBar.value, playerHealth, Time.deltaTime * lerpSpeed);
         }
-        //playerHealthBar.value = playerHealth / maxHealth;
+
+        playerHealthBar.value = playerHealth;
     }
     private IEnumerator damageTimer()
     {
@@ -78,4 +84,5 @@ public class PlayerHealth : MonoBehaviour
         yield return new WaitForSeconds(damageTimeout);
         canTakeDamage = true;
     }
+   
 }
