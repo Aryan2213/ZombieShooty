@@ -1413,6 +1413,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 861124445}
   m_CullTransparentMesh: 0
+--- !u!1 &863644907 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3580885400070346618, guid: b95f29df4917d9440a2810bf835efd81,
+    type: 3}
+  m_PrefabInstance: {fileID: 1169388654}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &875764270 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3587787891080024908, guid: 77217a99a8c5ee64ea34088843735f72,
@@ -1932,6 +1938,66 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8908970380489919691, guid: b95f29df4917d9440a2810bf835efd81,
+        type: 3}
+      propertyPath: flash
+      value: 
+      objectReference: {fileID: 863644907}
+    - target: {fileID: 8908970380489919691, guid: b95f29df4917d9440a2810bf835efd81,
+        type: 3}
+      propertyPath: bang
+      value: 
+      objectReference: {fileID: 1828038858}
+    - target: {fileID: 1068612478193631433, guid: b95f29df4917d9440a2810bf835efd81,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2075427248613555301, guid: b95f29df4917d9440a2810bf835efd81,
+        type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2075427248613555301, guid: b95f29df4917d9440a2810bf835efd81,
+        type: 3}
+      propertyPath: BypassReverbZones
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2075427248613555301, guid: b95f29df4917d9440a2810bf835efd81,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2075427248613555301, guid: b95f29df4917d9440a2810bf835efd81,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 72e014fafd4d6304a95983517ea47ee1, type: 3}
+    - target: {fileID: 4132824122975158892, guid: b95f29df4917d9440a2810bf835efd81,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132824122975158892, guid: b95f29df4917d9440a2810bf835efd81,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.9332
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132824122975158892, guid: b95f29df4917d9440a2810bf835efd81,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.009
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132824122975158892, guid: b95f29df4917d9440a2810bf835efd81,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1953
+      objectReference: {fileID: 0}
+    - target: {fileID: 3580885400070346618, guid: b95f29df4917d9440a2810bf835efd81,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b95f29df4917d9440a2810bf835efd81, type: 3}
 --- !u!1 &1263152335
@@ -2292,7 +2358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe1d1756ef19d564f82fdd82c0994511, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe1d1756ef19d564f82fdd82c0994511, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2855,6 +2921,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1791955768}
   m_CullTransparentMesh: 0
+--- !u!82 &1828038858 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2075427248613555301, guid: b95f29df4917d9440a2810bf835efd81,
+    type: 3}
+  m_PrefabInstance: {fileID: 1169388654}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1844537047
 GameObject:
   m_ObjectHideFlags: 0
