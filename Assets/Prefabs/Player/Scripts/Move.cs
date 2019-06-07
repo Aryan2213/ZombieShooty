@@ -7,11 +7,13 @@ public class Move : MonoBehaviour
     public float curSpeed;
     public float speed = 5;
     public float aimSpeed = 1;
+    public float jumpHieght = 100f;
 
     // Start is called before the first frame update
     void Start()
     {
         curSpeed = speed;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -32,6 +34,10 @@ public class Move : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(Vector3.right * curSpeed * Time.deltaTime);
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            transform.Translate(Vector3.up * jumpHieght * Time.deltaTime);
         }
 
         if (Input.GetMouseButtonDown(1))
