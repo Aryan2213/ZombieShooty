@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyChasing : MonoBehaviour
 {
     public float moveSpeed = 4;
-    public Transform player;
+    private Transform player;
     public float distance = 10;
 
     private void OnDrawGizmos()
@@ -18,6 +18,7 @@ public class EnemyChasing : MonoBehaviour
     void Start()
     {
         moveSpeed = 7;
+        player = GameObject.FindWithTag("Player").transform;
     }
 
     // Update is called once per frame

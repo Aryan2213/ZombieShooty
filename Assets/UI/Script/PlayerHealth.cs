@@ -110,6 +110,23 @@ namespace SuperShooter
 
 
         //}
+        //public void OnCollisionEnter(Collision collision)
+        //{
+        //    if (canTakeDamage && collision.gameObject.tag == "Enemy")
+        //    {
+
+        //        PlayerTakeDamage();
+        //        Debug.Log("Help");
+
+        //        StartCoroutine(damageTimer());
+        //    }
+        //}
+        //private IEnumerator damageTimer()
+        //{
+        //    canTakeDamage = false;
+        //    yield return new WaitForSeconds(damageTimeout);
+        //    canTakeDamage = true;
+        //}
 
     }
 }
