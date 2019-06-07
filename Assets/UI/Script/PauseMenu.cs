@@ -10,6 +10,10 @@ namespace SuperShooter
 
     public class PauseMenu : MonoBehaviour
     {
+        public Shoot shoot;
+        public Move move;
+        public Look look;
+
 
         public static bool paused;
         public GameObject pauseMenu;
@@ -39,8 +43,11 @@ namespace SuperShooter
             dirLight = GameObject.Find("Directional Light").GetComponent<Light>();
             soundSlider.value = PlayerPrefs.GetFloat("Audio Source");
             lightSlider.value = PlayerPrefs.GetFloat("Directional Light");
+            shoot = player.GetComponent<Shoot>();
+            move = player.GetComponent<Move>();
+            look = player.GetComponent<Look>();
             return;
-
+            
           
         }
 
@@ -77,7 +84,9 @@ namespace SuperShooter
 
             var player = GameObject.FindGameObjectWithTag("Player");
             //player.GetComponent<FPSController>().enabled = true;
-
+            look.enabled = true;
+            shoot.enabled = true;
+            move.enabled = true ;
 
         }
         public void LoadMenu()
@@ -147,14 +156,12 @@ namespace SuperShooter
             //player.GetComponent<FPSController>().enabled = false;
 
             systemPanel.SetActive(false);
-
-
             soundPanel.SetActive(true);
-
-
             keyPanel.SetActive(false);
 
-
+            look.enabled = false;
+            shoot.enabled = false;
+            move.enabled = false;
 
 
         }
