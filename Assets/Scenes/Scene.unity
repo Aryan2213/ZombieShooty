@@ -1830,6 +1830,21 @@ PrefabInstance:
       propertyPath: jumpHieght
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 8908970380489919690, guid: b95f29df4917d9440a2810bf835efd81,
+        type: 3}
+      propertyPath: m_Mass
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908970380165783203, guid: b95f29df4917d9440a2810bf835efd81,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.549
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908970378563773163, guid: b95f29df4917d9440a2810bf835efd81,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b95f29df4917d9440a2810bf835efd81, type: 3}
 --- !u!1 &1263152335
@@ -2149,6 +2164,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472631684}
   m_CullTransparentMesh: 0
+--- !u!1001 &1475759985
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1571703129}
+    m_Modifications:
+    - target: {fileID: 100000, guid: fe1d1756ef19d564f82fdd82c0994511, type: 3}
+      propertyPath: m_Name
+      value: AK-12 (with magazine)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe1d1756ef19d564f82fdd82c0994511, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.003
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe1d1756ef19d564f82fdd82c0994511, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.15832
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe1d1756ef19d564f82fdd82c0994511, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.997
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe1d1756ef19d564f82fdd82c0994511, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe1d1756ef19d564f82fdd82c0994511, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe1d1756ef19d564f82fdd82c0994511, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe1d1756ef19d564f82fdd82c0994511, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe1d1756ef19d564f82fdd82c0994511, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe1d1756ef19d564f82fdd82c0994511, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe1d1756ef19d564f82fdd82c0994511, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe1d1756ef19d564f82fdd82c0994511, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe1d1756ef19d564f82fdd82c0994511, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe1d1756ef19d564f82fdd82c0994511, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe1d1756ef19d564f82fdd82c0994511, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fe1d1756ef19d564f82fdd82c0994511, type: 3}
 --- !u!1 &1476349553
 GameObject:
   m_ObjectHideFlags: 0
@@ -2350,6 +2434,12 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!4 &1571703129 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8908970380165783203, guid: b95f29df4917d9440a2810bf835efd81,
+    type: 3}
+  m_PrefabInstance: {fileID: 1169388654}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1589048907
 GameObject:
   m_ObjectHideFlags: 0
