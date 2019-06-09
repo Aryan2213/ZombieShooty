@@ -7,14 +7,15 @@ public class PlayerHealth : MonoBehaviour
 {
     #region Varibles
     public float maxHealth = 250;
-    public float playerHealth;
+    public float curHealth;
     public float takeDamage = 15;
-
-    public float lerpSpeed = 4f;
+    [Header("DamageDelay")]
     public float damageTimeout = 2f;
+    private bool canTakeDamage = true;
+    [Header("healthbar"+"damageBG")]
+    public float lerpSpeed = 4f;
     public float flashSpeed = 5f;
 
-    private bool canTakeDamage = true;
     private bool damaged = false;
     public Color flashColour = new Color(1f, 0f, 0f, 10f);
 
@@ -22,15 +23,21 @@ public class PlayerHealth : MonoBehaviour
     public Image damageImage;
     public GameObject hurt;
     public GameObject dieScreen;
+
+    public bool isDead = false;
+    [Header("SoundClip")]
+    public AudioSource damageSound;
+    public AudioSource deadSound;
     #endregion
 
     // Use this for initialization
     void Start()
     {
         // Set players health to starting health value
-        playerHealth = maxHealth;
-        playerHealthBar.value = playerHealth;
-        delayHealthBar.value = playerHealth;
+        curHealth = maxHealth;
+        playerHealthBar.value = curHealth;
+        delayHealthBar.value = curHealth;
+
     }
 
     public void OnCollisionEnter(Collision collision)
@@ -42,46 +49,44 @@ public class PlayerHealth : MonoBehaviour
             PlayerTakeDamage();
             Debug.Log("Help");      
             StartCoroutine(damageTimer());
-
+            
         }
      
     }
 
     public void PlayerTakeDamage()
     {
-        // Player takes damage
-        playerHealth -= takeDamage;
-        // Set health bar to lower
         
+        // Player takes damage
+        curHealth -= takeDamage;
 
-
-        if (playerHealth < 41)
+        if(curHealth > 0)
+        {
+            damageSound.Play();
+        }
+        if (curHealth < 41)
         {
             // Player hurt
             hurt.SetActive(true);
         }
 
-        if (playerHealth < 0)
+        if (curHealth <= 0)
         {
-            // Would You Kindly Die Sir!
-            dieScreen.SetActive(true);
-            Time.timeScale = 0;
-            delayHealthBar.value = 0;
-            playerHealthBar.value = 0;
+            
+            Death();
 
         }
     }
-
     // Update is called once per frame
     void Update()
     {
 
-        if (playerHealth != delayHealthBar.value)
+        if (curHealth != delayHealthBar.value)
         {
-            delayHealthBar.value = Mathf.Lerp(delayHealthBar.value, playerHealth, Time.deltaTime * lerpSpeed);
+            delayHealthBar.value = Mathf.Lerp(delayHealthBar.value, curHealth, Time.deltaTime * lerpSpeed);
         }
 
-        playerHealthBar.value = playerHealth;
+        playerHealthBar.value = curHealth;
 
         if (damaged)
         {
@@ -100,5 +105,14 @@ public class PlayerHealth : MonoBehaviour
         yield return new WaitForSeconds(damageTimeout);
         canTakeDamage = true;
     }
-   
+   void Death()
+    {
+        isDead = true;
+        // Would You Kindly Die Sir!
+        dieScreen.SetActive(true);
+        Time.timeScale = 0;
+        delayHealthBar.value = 0;
+        playerHealthBar.value = 0;
+        deadSound.Play();
+    }
 }
