@@ -42,7 +42,7 @@ public class SpawnEnemy : MonoBehaviour
             GameObject clone = Instantiate(dog, enemyPoint, Quaternion.identity);
             yield return new WaitForSeconds(0.5f);
             dogCount += 1;
-            if (dog.name == "enemy")
+            if (dog.name == "Enemy")
             {
                 clone.transform.SetParent(container.transform);
             }

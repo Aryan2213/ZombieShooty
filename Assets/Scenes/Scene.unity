@@ -973,6 +973,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8161960719243267207, guid: 77217a99a8c5ee64ea34088843735f72,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8161960718829036384, guid: 77217a99a8c5ee64ea34088843735f72,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2063,6 +2068,11 @@ PrefabInstance:
         type: 3}
       propertyPath: maxHealth
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908970380393153821, guid: b95f29df4917d9440a2810bf835efd81,
+        type: 3}
+      propertyPath: m_ForceIntoRT
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8931649867524842151, guid: b95f29df4917d9440a2810bf835efd81,
         type: 3}

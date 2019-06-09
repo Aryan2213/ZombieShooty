@@ -173,6 +173,10 @@ public class PauseMenu : MonoBehaviour
         {
             soundAudio.clip = deadMusic;
             soundAudio.Play();
+
+            look.enabled = false;
+            shoot.enabled = false;
+            move.enabled = false;
         }
     }
 
