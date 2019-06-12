@@ -19,7 +19,7 @@ public class Move : MonoBehaviour
     {
         curSpeed = speed;
         Cursor.visible = false;
-        canJump = true;
+
         rb = GetComponent<Rigidbody>();
     }
 
@@ -43,9 +43,10 @@ public class Move : MonoBehaviour
             transform.Translate(Vector3.right * curSpeed * Time.deltaTime);
         }
 
-            if (Input.GetKey(KeyCode.Space)&& isGrounded)
+            if (Input.GetKey(KeyCode.Space) && isGrounded)
             {
                 rb.AddForce(new Vector3(0, jumpHieght, 0), ForceMode.Impulse);
+            isGrounded = false;
                
             } 
 
@@ -60,7 +61,7 @@ public class Move : MonoBehaviour
     }
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.tag == ("Ground") && isGrounded == false)
+        if (col.gameObject.tag == ("Ground"))
         {
             isGrounded = true;
         }

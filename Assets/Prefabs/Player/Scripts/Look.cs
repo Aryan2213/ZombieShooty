@@ -6,7 +6,7 @@ public class Look : MonoBehaviour
 {
     public float speed;
 
-    public float horizontalSpeed = 6.0F;
+    public float horizontalSpeed = -6.0F;
     public float verticalSpeed = 0;
     void Update()
     {
