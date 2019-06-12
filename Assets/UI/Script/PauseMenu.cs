@@ -14,9 +14,11 @@ public class PauseMenu : MonoBehaviour
 
 
     public static bool paused;
+    public bool playInAlive;
     public GameObject pauseMenu;
     public AudioSource soundAudio;
-    public AudioClip deadMusic;
+    public AudioClip inGameMusic, deadMusic;
+
     public Light dirLight;
     public Slider soundSlider;
     public Slider lightSlider;
@@ -171,8 +173,11 @@ public class PauseMenu : MonoBehaviour
     {
         if (playerHealth.curHealth <= 0)
         {
-            soundAudio.clip = deadMusic;
-            soundAudio.Play();
+
+                soundAudio.clip = deadMusic;
+                soundAudio.Play();
+
+
 
             look.enabled = false;
             shoot.enabled = false;
