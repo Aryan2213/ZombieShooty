@@ -5,8 +5,10 @@ using UnityEngine;
 public class EnemyChasing : MonoBehaviour
 {
     public float moveSpeed = 4;
+    public float speed;
     private Transform player;
     public float distance = 10;
+    public float stopTime;
 
     private void OnDrawGizmos()
     {
@@ -17,7 +19,7 @@ public class EnemyChasing : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        moveSpeed = 7;
+        moveSpeed = speed;
         player = GameObject.FindWithTag("Player").transform;
     }
 
@@ -38,7 +40,7 @@ public class EnemyChasing : MonoBehaviour
     IEnumerator stopAttack()
     {
         moveSpeed = 0;
-        yield return new WaitForSeconds(4);
-        moveSpeed = 7;
+        yield return new WaitForSeconds(stopTime);
+        moveSpeed = speed;
     }
 }

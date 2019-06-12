@@ -11,14 +11,15 @@ public class Move : MonoBehaviour
     public float jumpHieght = 100f;
 
     Rigidbody rb;
-    public bool canJump;
+    public bool isGrounded;
+
 
     // Start is called before the first frame update
     void Start()
     {
         curSpeed = speed;
         Cursor.visible = false;
-        canJump = true;
+
         rb = GetComponent<Rigidbody>();
     }
 
@@ -42,16 +43,12 @@ public class Move : MonoBehaviour
             transform.Translate(Vector3.right * curSpeed * Time.deltaTime);
         }
 
-        if (canJump)
-        {
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetKey(KeyCode.Space) && isGrounded)
             {
-                rb.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
-                canJump = false;
-                //LateUpdate();
-            }
-        }
-        
+                rb.AddForce(new Vector3(0, jumpHieght, 0), ForceMode.Impulse);
+            isGrounded = false;
+               
+            } 
 
         if (Input.GetMouseButtonDown(1))
         {
@@ -62,5 +59,11 @@ public class Move : MonoBehaviour
             curSpeed = speed;
         }
     }
-
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.tag == ("Ground"))
+        {
+            isGrounded = true;
+        }
+    }
 }

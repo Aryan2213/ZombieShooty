@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.22510481, g: 0.25166202, b: 0.32264084, a: 1}
+  m_IndirectSpecularColor: {r: 0.22506478, g: 0.2516193, b: 0.3227109, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1726,6 +1726,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1134636885 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 306389407, guid: b95f29df4917d9440a2810bf835efd81,
+    type: 3}
+  m_PrefabInstance: {fileID: 1169388654}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1143397398
 GameObject:
   m_ObjectHideFlags: 0
@@ -2077,7 +2083,7 @@ PrefabInstance:
     - target: {fileID: 8908970380489919685, guid: b95f29df4917d9440a2810bf835efd81,
         type: 3}
       propertyPath: maxHealth
-      value: 50
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 8908970380393153821, guid: b95f29df4917d9440a2810bf835efd81,
         type: 3}
@@ -2099,6 +2105,26 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 287a34c559b597048b6c103bf3bcc76b, type: 3}
+    - target: {fileID: 8908970380489919693, guid: b95f29df4917d9440a2810bf835efd81,
+        type: 3}
+      propertyPath: jumpHieght
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908970380285451611, guid: b95f29df4917d9440a2810bf835efd81,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908970380357251553, guid: b95f29df4917d9440a2810bf835efd81,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908970380285451610, guid: b95f29df4917d9440a2810bf835efd81,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b95f29df4917d9440a2810bf835efd81, type: 3}
 --- !u!1 &1263152335
@@ -2823,6 +2849,51 @@ MonoBehaviour:
   systemPanel: {fileID: 1589048907}
   keyPanel: {fileID: 901717070}
   playerHealth: {fileID: 0}
+--- !u!1 &1700411649
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1700411650}
+  - component: {fileID: 1700411651}
+  m_Layer: 0
+  m_Name: firePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1700411650
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700411649}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.11060017, y: 0.009700082, z: 0.0016000537}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1134636885}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1700411651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700411649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c28b49e8dc73c754cbb85d07ed7a4f6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 2791629117271691943, guid: dfc9872ba5cabce468d658ebf83be83d, type: 3}
+  speed: 5000
 --- !u!1 &1780380303
 GameObject:
   m_ObjectHideFlags: 0
@@ -3040,6 +3111,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 8ec635577e1b38044ade7a4327753b2b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8ec635577e1b38044ade7a4327753b2b, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8ec635577e1b38044ade7a4327753b2b, type: 3}
       propertyPath: m_LocalPosition.x

@@ -10,31 +10,36 @@ namespace ZombieShooty
     {
 
         public int health = 100;
-        public int damage = 25;
+        public int damage = 24;
 
 
-        //public GameObject player;
-        private Transform target;
-        private NavMeshAgent nav;
-
-
+       
 
         // ------------------------------------------------- //
 
 
         // ------------------------------------------------- //
-        public void Start()
+       
+
+        
+
+        public void OnTriggerEnter(Collider other)
         {
-            nav = GetComponent<NavMeshAgent>();
-            target = GameObject.FindWithTag("Player").transform;
+            if(other.gameObject.tag == "Bullet")
+            {
+                TakeDamage();
+                Debug.Log("It Hit");
+            }
         }
 
-
-        void Update()
+        void TakeDamage()
         {
+            health -= damage;
 
-                nav.SetDestination(target.position);
-  
+            if(health <= 0)
+            {
+                Destroy(this.gameObject);
+            }
         }
 
     }
