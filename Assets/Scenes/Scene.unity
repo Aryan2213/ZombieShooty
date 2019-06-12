@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.22506478, g: 0.2516193, b: 0.3227109, a: 1}
+  m_IndirectSpecularColor: {r: 0.22510481, g: 0.25166202, b: 0.32264084, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2120,6 +2120,16 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 8908970380357251553, guid: b95f29df4917d9440a2810bf835efd81,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.031
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908970380357251553, guid: b95f29df4917d9440a2810bf835efd81,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0175
+      objectReference: {fileID: 0}
     - target: {fileID: 8908970380285451610, guid: b95f29df4917d9440a2810bf835efd81,
         type: 3}
       propertyPath: m_Enabled
@@ -2836,8 +2846,10 @@ MonoBehaviour:
   shoot: {fileID: 2080506818}
   move: {fileID: 2080506819}
   look: {fileID: 2080506820}
+  playInAlive: 0
   pauseMenu: {fileID: 423587339}
   soundAudio: {fileID: 1165635552}
+  inGameMusic: {fileID: 0}
   deadMusic: {fileID: 8300000, guid: 56bb5173681f01447b2b5fa867d033d4, type: 3}
   dirLight: {fileID: 170076734}
   soundSlider: {fileID: 1568231703}
@@ -2874,7 +2886,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1700411649}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.11060017, y: 0.009700082, z: 0.0016000537}
+  m_LocalPosition: {x: 0.0536, y: 0.0132, z: 0.0016}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1134636885}
