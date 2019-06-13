@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
     [Header("DamageDelay")]
     public float damageTimeout = 2f;
     private bool canTakeDamage = true;
-    [Header("healthbar"+"damageBG")]
+    [Header("healthbar"+"AND damageBG")]
     public float lerpSpeed = 4f;
     public float flashSpeed = 5f;
 
@@ -23,11 +23,15 @@ public class PlayerHealth : MonoBehaviour
     public Image damageImage;
     public GameObject hurt;
     public GameObject dieScreen;
-
     public bool isDead = false;
     [Header("SoundClip")]
     public AudioSource damageSound;
     public AudioSource deadSound;
+    [Header("DeadInTheAir")]
+    public float timeInAir = 0;
+    public float deathTimer = 10;
+    private bool dead = false;
+    private Move move;
     #endregion
 
     // Use this for initialization
@@ -37,7 +41,7 @@ public class PlayerHealth : MonoBehaviour
         curHealth = maxHealth;
         playerHealthBar.value = curHealth;
         delayHealthBar.value = curHealth;
-
+        move = GetComponent<Move>();
     }
 
     public void OnCollisionEnter(Collision collision)
@@ -72,7 +76,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (curHealth <= 0)
         {
-            
+            isDead = true;
             Death();
 
         }
@@ -81,7 +85,12 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
 
-        if (curHealth != delayHealthBar.value)
+        if(transform.position.y < -100)
+        {
+            Death();
+        }
+
+            if (curHealth != delayHealthBar.value)
         {
             delayHealthBar.value = Mathf.Lerp(delayHealthBar.value, curHealth, Time.deltaTime * lerpSpeed);
         }
@@ -98,6 +107,8 @@ public class PlayerHealth : MonoBehaviour
 
         }
         damaged = false;
+
+        
     }
     private IEnumerator damageTimer()
     {
@@ -107,7 +118,7 @@ public class PlayerHealth : MonoBehaviour
     }
    void Death()
     {
-        isDead = true;
+        
         // Would You Kindly Die Sir!
         dieScreen.SetActive(true);
         Time.timeScale = 0;
