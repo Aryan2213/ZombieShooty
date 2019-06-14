@@ -109,6 +109,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   damage: 24
+  score: 0
+  scoreValue: 10
+  scoreCount: {fileID: 2619719672096180606, guid: 7bb7f960474706a4a82977c91996fadb,
+    type: 3}
 --- !u!114 &4685597753384402237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,6 +129,7 @@ MonoBehaviour:
   speed: 7
   distance: 1
   stopTime: 4
+  gravity: 9.8
 --- !u!54 &2483619441981047903
 Rigidbody:
   m_ObjectHideFlags: 0
