@@ -5,8 +5,9 @@ using UnityEngine;
 public class FlameThrower : MonoBehaviour
 {
     public GameObject fireBullet;
-    public float fireSpeed;   
-
+    public float fireSpeed;
+    public AudioSource flamer;
+    
     // Update is called once per frame
     void Update()
     {
@@ -15,7 +16,16 @@ public class FlameThrower : MonoBehaviour
             GameObject insBullet = Instantiate(fireBullet, transform.position, Quaternion.identity) as GameObject;
             Rigidbody insBulletRig = insBullet.GetComponent<Rigidbody>();
             insBulletRig.AddForce(transform.right * fireSpeed);
+        }
 
+        if(Input.GetMouseButtonDown(0))
+        {
+            flamer.Play();
+        }
+
+        if(Input.GetMouseButtonUp(0))
+        {
+            flamer.Stop();
         }
     }
 }
