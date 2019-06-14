@@ -112,7 +112,14 @@ MonoBehaviour:
   enemy: {fileID: 2351152723677542247}
   health: 100
   damage: 25
+<<<<<<< HEAD
+  score: 0
+  scoreValue: 10
+  scoreCount: {fileID: 2619719672096180606, guid: 7bb7f960474706a4a82977c91996fadb,
+    type: 3}
+=======
   anim: {fileID: 6636226885589092037}
+>>>>>>> 6a1bec91ca0fca8e2e4d2497efa9c502f594d979
 --- !u!114 &434623543821085624
 MonoBehaviour:
   m_ObjectHideFlags: 0
