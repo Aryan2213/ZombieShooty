@@ -2,24 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 namespace ZombieShooty
-{
-
+{    
     public class Enemy : MonoBehaviour
     {
 
         public int health = 100;
         public int damage = 24;
 
+        
 
-       
+        // ------------------------------------------------- //
+
 
         // ------------------------------------------------- //
 
-
-        // ------------------------------------------------- //
-       
 
         
 
@@ -32,15 +31,17 @@ namespace ZombieShooty
             }
         }
 
-        void TakeDamage()
+        public void TakeDamage()
         {
             health -= damage;
 
             if(health <= 0)
             {
-                Destroy(this.gameObject);
+                Destroy(this.gameObject);  
             }
         }
+
+        
 
     }
 }
