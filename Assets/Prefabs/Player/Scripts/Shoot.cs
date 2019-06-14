@@ -11,10 +11,14 @@ public class Shoot : MonoBehaviour
     public GameObject aim;
     public GameObject mCamera;
     public GameObject aimCamera;
-    
+
+    public GameObject rifle;
+    public GameObject flameThrower;
 
     void Update()
     {
+        SwitchWeapons();
+
         if(Input.GetMouseButtonDown(0))
         {
             flash.SetActive(true);
@@ -42,4 +46,19 @@ public class Shoot : MonoBehaviour
             aimCamera.SetActive(false);
         }
     }
+
+    public void SwitchWeapons()
+    {
+        if (Input.GetKey(KeyCode.Alpha1)) // forward
+        {
+            rifle.SetActive(true);
+            flameThrower.SetActive(false);
+        }
+        else if (Input.GetKey(KeyCode.Alpha2)) // backwards
+        {
+            rifle.SetActive(false);
+            flameThrower.SetActive(true);
+        }
+    }
+
 }
