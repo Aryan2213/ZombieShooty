@@ -6,8 +6,10 @@ public class Shooting : MonoBehaviour
 {
     public GameObject bullet;
     public float speed;
+    public AudioSource bang;
+
     // Use this for initialization
-  
+
     // Update is called once per frame
     void Update()
     {
@@ -16,7 +18,7 @@ public class Shooting : MonoBehaviour
             GameObject insBullet = Instantiate(bullet, transform.position, Quaternion.identity) as GameObject;
             Rigidbody insBulletRig = insBullet.GetComponent<Rigidbody>();
             insBulletRig.AddForce(transform.right * speed);
-               
+            bang.Play();
         }
     }
 }
