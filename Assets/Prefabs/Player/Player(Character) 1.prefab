@@ -661,7 +661,6 @@ Transform:
   - {fileID: 1068612478193631433}
   - {fileID: 4132824122975158892}
   - {fileID: 5924417016681802051}
-  - {fileID: 8908970380357251553}
   m_Father: {fileID: 8908970380489919688}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -780,7 +779,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8908970380357251553
 Transform:
   m_ObjectHideFlags: 0
@@ -788,12 +787,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8908970380357251558}
-  m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
-  m_LocalPosition: {x: 0.4470001, y: 0.60832, z: 1.3597}
-  m_LocalScale: {x: 0.20000009, y: 0.2000003, z: 1}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0.7071068, w: 0}
+  m_LocalPosition: {x: 0.040299997, y: 0.032, z: -0.017}
+  m_LocalScale: {x: 0.022222228, y: 0.022222282, z: 0.1111113}
   m_Children: []
-  m_Father: {fileID: 8908970380165783203}
-  m_RootOrder: 4
+  m_Father: {fileID: 306389407}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
 --- !u!212 &8908970380357251552
 SpriteRenderer:
@@ -1152,11 +1151,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flash: {fileID: 3580885400070346618}
-  bang: {fileID: 0}
   hipFire: {fileID: 8908970380367260340}
   aim: {fileID: 8908970380357251558}
   mCamera: {fileID: 8908970380393153795}
   aimCamera: {fileID: 8908970380285451611}
+  rifle: {fileID: 0}
+  flameThrower: {fileID: 0}
 --- !u!54 &8908970380489919690
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1215,7 +1215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe1d1756ef19d564f82fdd82c0994511, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe1d1756ef19d564f82fdd82c0994511, type: 3}
       propertyPath: m_LocalPosition.x

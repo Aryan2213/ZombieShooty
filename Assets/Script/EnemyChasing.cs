@@ -10,7 +10,6 @@ public class EnemyChasing : MonoBehaviour
     public float distance = 1;
     public float stopTime;
     public Animator anim;
-    public float gravity = 9.8f;
 
     private void OnDrawGizmos()
     {
@@ -29,8 +28,6 @@ public class EnemyChasing : MonoBehaviour
     void Update()
     {
 
-        Vector3 velocity;
-        velocity.y = -gravity;
    
         transform.LookAt(player);
         transform.position += transform.forward * moveSpeed * Time.deltaTime;
@@ -38,6 +35,7 @@ public class EnemyChasing : MonoBehaviour
 
         if (Vector3.Distance(transform.position, player.position) < distance)
         {
+            anim.SetTrigger("Attack");
             StartCoroutine(stopAttack());
         }
         
@@ -48,7 +46,7 @@ public class EnemyChasing : MonoBehaviour
     IEnumerator stopAttack()
     {
         moveSpeed = 0;
-        anim.SetTrigger("Attack");
+      
         yield return new WaitForSeconds(stopTime);
         moveSpeed = speed;
     }
