@@ -32,6 +32,8 @@ public class PlayerHealth : MonoBehaviour
     public float deathTimer = 10;
     private bool dead = false;
     private Move move;
+
+    public GameObject hand;
     #endregion
 
     // Use this for initialization
@@ -125,5 +127,7 @@ public class PlayerHealth : MonoBehaviour
         delayHealthBar.value = 0;
         playerHealthBar.value = 0;
         deadSound.Play();
+        Cursor.visible = true;
+        hand.SetActive(false);
     }
 }
