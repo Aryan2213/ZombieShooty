@@ -8,9 +8,10 @@ namespace ZombieShooty
 
     public class Enemy : MonoBehaviour
     {
-
+        public Collider enemy;
         public int health = 100;
         public int damage = 24;
+        public Animator anim;
 
 
        
@@ -35,11 +36,21 @@ namespace ZombieShooty
         void TakeDamage()
         {
             health -= damage;
-
-            if(health <= 0)
+            if (health <= 0)
             {
-                Destroy(this.gameObject);
+                anim.SetBool("Death", true);
             }
+
+        }
+        void Death()
+        {
+           
+                Destroy(this.gameObject);
+           
+        }
+        void ColiderDisable()
+        {
+            enemy.enabled = false;
         }
 
     }
