@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyChasing : MonoBehaviour
 {
-    public float moveSpeed = 4;
+    private float moveSpeed = 4;
     public float speed;
     private Transform player;
     public float distance = 1;
