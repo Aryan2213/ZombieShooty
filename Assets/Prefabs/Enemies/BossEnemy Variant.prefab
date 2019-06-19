@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 5560980150184257833, guid: 967cc4bc6bffeac429dae81b4ec372ac,
         type: 3}
       propertyPath: m_Name
-      value: BossEnemy
+      value: BossEnemy Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5560980150184257827, guid: 967cc4bc6bffeac429dae81b4ec372ac,
         type: 3}
@@ -86,6 +86,11 @@ PrefabInstance:
         type: 3}
       propertyPath: health
       value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5560980150184257826, guid: 967cc4bc6bffeac429dae81b4ec372ac,
+        type: 3}
+      propertyPath: scoreValue
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7747456644526437873, guid: 967cc4bc6bffeac429dae81b4ec372ac,
         type: 3}

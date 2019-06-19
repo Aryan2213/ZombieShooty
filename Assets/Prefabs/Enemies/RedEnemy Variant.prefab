@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 2351152723677542240, guid: 8d922935bac64434ab8a942d7a54fe9d,
         type: 3}
       propertyPath: m_Name
-      value: RedEnemy
+      value: RedEnemy Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2351152723677542250, guid: 8d922935bac64434ab8a942d7a54fe9d,
         type: 3}
@@ -66,6 +66,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2351152723677542251, guid: 8d922935bac64434ab8a942d7a54fe9d,
+        type: 3}
+      propertyPath: scoreValue
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 434623543821085624, guid: 8d922935bac64434ab8a942d7a54fe9d,
         type: 3}

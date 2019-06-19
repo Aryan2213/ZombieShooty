@@ -113,6 +113,7 @@ MonoBehaviour:
   health: 100
   damage: 25
   anim: {fileID: 6636226885589092037}
+  scoreValue: 10
 --- !u!114 &434623543821085624
 MonoBehaviour:
   m_ObjectHideFlags: 0

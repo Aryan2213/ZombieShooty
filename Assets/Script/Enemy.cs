@@ -12,9 +12,9 @@ namespace ZombieShooty
         public int health = 100;
         public int damage = 24;
         public Animator anim;
+        public bool isDead = false;
 
-
-       
+        public int scoreValue;
 
         // ------------------------------------------------- //
 
@@ -29,7 +29,7 @@ namespace ZombieShooty
             if(other.gameObject.tag == "Bullet")
             {
                 TakeDamage();
-                Debug.Log("It Hit");
+                
             }
         }
 
@@ -39,18 +39,20 @@ namespace ZombieShooty
             if (health <= 0)
             {
                 anim.SetBool("Death", true);
+                Death();
+                if(health == 0)
+                {
+                    ScoreManager.value += scoreValue;
+                }
             }
+           
 
         }
         void Death()
         {
-           
-                Destroy(this.gameObject);
-           
-        }
-        void ColiderDisable()
-        {
-            enemy.enabled = false;
+            GetComponent<Rigidbody>().isKinematic = true;
+            Destroy(this.gameObject,0.5f);
+            GetComponent<CapsuleCollider>().enabled = false;
         }
 
     }
