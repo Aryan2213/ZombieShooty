@@ -2113,12 +2113,16 @@ PrefabInstance:
     - target: {fileID: 8908970380285451611, guid: b95f29df4917d9440a2810bf835efd81,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8908970380357251553, guid: b95f29df4917d9440a2810bf835efd81,
         type: 3}
       propertyPath: m_RootOrder
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 306389407, guid: b95f29df4917d9440a2810bf835efd81, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.067
       objectReference: {fileID: 0}
     - target: {fileID: 8908970380285451610, guid: b95f29df4917d9440a2810bf835efd81,
         type: 3}
