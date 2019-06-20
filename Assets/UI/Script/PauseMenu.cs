@@ -26,6 +26,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject soundButton, systemButton, keyButton;
     public GameObject soundPanel, systemPanel, keyPanel;
 
+    public GameObject hand;
+
     public PlayerHealth playerHealth;
     //public GameObject soundImage1, systemImage1, keyImage1;
     //public GameObject soundText1, soundText2, systemText1, systemText2, keyText1, keyText2;
@@ -85,6 +87,7 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
+        hand.SetActive(true);
 
         var player = GameObject.FindGameObjectWithTag("Player");
         //player.GetComponent<FPSController>().enabled = true;
@@ -155,6 +158,7 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
+        hand.SetActive(false);
 
         var player = GameObject.FindGameObjectWithTag("Player");
         //player.GetComponent<FPSController>().enabled = false;

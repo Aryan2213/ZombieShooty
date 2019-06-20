@@ -3116,6 +3116,7 @@ MonoBehaviour:
   soundPanel: {fileID: 766981314}
   systemPanel: {fileID: 1589048907}
   keyPanel: {fileID: 901717070}
+  hand: {fileID: 971679161}
   playerHealth: {fileID: 0}
 --- !u!1 &1700411649
 GameObject:
@@ -4102,6 +4103,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3885111937729979567, guid: 92cb02e672b725c46b6ee001a66492f0,
+        type: 3}
+      propertyPath: health
+      value: 10000
+      objectReference: {fileID: 0}
     - target: {fileID: 1387776671528106108, guid: 92cb02e672b725c46b6ee001a66492f0,
         type: 3}
       propertyPath: speed
@@ -4111,11 +4117,6 @@ PrefabInstance:
         type: 3}
       propertyPath: distance
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3885111937729979567, guid: 92cb02e672b725c46b6ee001a66492f0,
-        type: 3}
-      propertyPath: health
-      value: 10000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92cb02e672b725c46b6ee001a66492f0, type: 3}
