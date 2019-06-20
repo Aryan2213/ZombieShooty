@@ -33,13 +33,18 @@ namespace ZombieShooty
             }
         }
 
+        public void DestroyCol()
+
+        {
+            enemy.enabled = false;
+        }
         void TakeDamage()
         {
             health -= damage;
             if (health <= 0)
             {
                 anim.SetBool("Death", true);
-                Death();
+                
                 if(health == 0)
                 {
                     ScoreManager.value += scoreValue;
@@ -50,9 +55,9 @@ namespace ZombieShooty
         }
         void Death()
         {
-            GetComponent<Rigidbody>().isKinematic = true;
-            Destroy(this.gameObject,0.5f);
-            GetComponent<CapsuleCollider>().enabled = false;
+            
+            Destroy(this.gameObject);
+            
         }
 
     }
